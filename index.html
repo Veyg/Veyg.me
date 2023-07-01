@@ -3,43 +3,41 @@
 <head>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <!-- Your introduction and other relevant information -->
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div id="project-list">
-            <!-- This is where your GitHub repositories will be dynamically added -->
+        <div class="container">
+            <h2>About Me</h2>
+            <!-- Your introduction and other relevant information -->
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div id="project-list">
+                <!-- This is where your GitHub repositories will be dynamically added -->
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

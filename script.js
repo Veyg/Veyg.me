@@ -4,7 +4,7 @@ const projectList = document.getElementById("project-list");
 fetch("https://api.github.com/users/Veyg/repos")
     .then(response => response.json())
     .then(data => {
-        data.forEach(repo => {
+        data.forEach((repo, index) => { // Add an index parameter
             const projectItem = document.createElement("div");
             projectItem.classList.add("project-item");
 
@@ -24,5 +24,10 @@ fetch("https://api.github.com/users/Veyg/repos")
             projectItem.appendChild(projectLink);
 
             projectList.appendChild(projectItem);
+
+            // Add animation class after a delay
+            setTimeout(() => {
+                projectItem.classList.add("animate");
+            }, index * 100); // Delay each item by 100 milliseconds
         });
     });
