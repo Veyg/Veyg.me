@@ -31,3 +31,19 @@ fetch("https://api.github.com/users/Veyg/repos")
             }, index * 100); // Delay each item by 100 milliseconds
         });
     });
+
+// Animate On Scroll initialisation
+AOS.init();
+
+// Smooth Scrolling
+$('.smoothScroll').click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500);
+});
+
+// Back to top button
+$('#back-to-top').click(function() {
+    $('body,html').animate({
+        scrollTop : 0
+    }, 500);
+});

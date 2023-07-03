@@ -154,17 +154,109 @@ footer {
 footer p {
     margin: 0;
 }
-.project-item.animate {
-    animation: fadeIn 1s ease;
+
+/* Additional Animations */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: animatedBackground 20s linear infinite;
+    background-image: linear-gradient(to right, #16a085, #f4d03f, #2980b9, #c0392b);
+    background-size: 400% 400%;
 }
 
-@keyframes fadeIn {
+@keyframes animatedBackground {
     0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        background-position: 0% 50%;
     }
+}
+/* Here you can update your existing styles with new colors, gradients, hover effects, etc. You can also add new styles for the back-to-top button, social media icons, and any other new elements you've added to your HTML. Here's an example of styling for the back-to-top button: */
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+#back-to-top:hover {
+    background: #e9ebec;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url(path_to_your_image) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+/* Add the remaining updated styles... */
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        padding: 20px;
+    }
+
+    #project-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Style changes for other elements as needed... */
+}
+
+/* Medium devices (tablets, less than 768px) */
+@media (max-width: 767.98px) { 
+    /* Style changes for tablets... */
+}
+
+/* Large devices (desktops, less than 992px) */
+@media (max-width: 991.98px) { 
+    /* Style changes for small desktops... */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    /* Style changes for large desktops... */
 }

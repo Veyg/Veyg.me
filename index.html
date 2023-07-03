@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>My Portfolio</title>
+    <title>My Stunning Portfolio</title>
+    <!-- Responsive viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
 </head>
+
 <body>
+    <div class="animated-bg"></div> <!-- Add the animated background element -->
+
     <header>
         <div class="container">
-            <h1>My Portfolio</h1>
+            <h1>My Stunning Portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about" class="smoothScroll">About</a></li>
+                    <li><a href="#projects" class="smoothScroll">Projects</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" data-aos="fade-right">
         <div class="container">
             <h2>About Me</h2>
+            <div class="profile-image">
+                <!-- Profile image goes here -->
+            </div>
             <!-- Your introduction and other relevant information -->
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-left">
         <div class="container">
             <h2>My Projects</h2>
             <div id="project-list">
@@ -36,10 +47,16 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2023 My Stunning Portfolio. All rights reserved.</p>
+            <!-- Social media links here -->
         </div>
     </footer>
 
+    <button id="back-to-top" title="Go to top">Top</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
