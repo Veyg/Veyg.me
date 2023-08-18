@@ -1,49 +1,25 @@
-// Fetch GitHub repositories and dynamically add them to the project section
-const projectList = document.getElementById("project-list");
+// Set the target date for when the construction is expected to be completed
+const targetDate = new Date('2023-10-01T00:00:00');
 
-fetch("https://api.github.com/users/Veyg/repos")
-    .then(response => response.json())
-    .then(data => {
-        data.forEach((repo, index) => { // Add an index parameter
-            const projectItem = document.createElement("div");
-            projectItem.classList.add("project-item");
+// Function to update the countdown timer
+function updateCountdown() {
+  const now = new Date();
+  const timeRemaining = targetDate - now;
 
-            const projectName = document.createElement("h3");
-            projectName.textContent = repo.name;
+  if (timeRemaining > 0) {
+    const seconds = Math.floor((timeRemaining / 1000) % 60);
+    const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
+    const hours = Math.floor((timeRemaining / 1000 / 60 / 60) % 24);
 
-            const projectDescription = document.createElement("p");
-            projectDescription.textContent = repo.description;
+    document.getElementById('countdown').textContent =
+      `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  } else {
+    document.getElementById('countdown').textContent = 'Construction Completed!';
+  }
+}
 
-            const projectLink = document.createElement("a");
-            projectLink.textContent = "View on GitHub";
-            projectLink.href = repo.html_url;
-            projectLink.target = "_blank";
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
 
-            projectItem.appendChild(projectName);
-            projectItem.appendChild(projectDescription);
-            projectItem.appendChild(projectLink);
-
-            projectList.appendChild(projectItem);
-
-            // Add animation class after a delay
-            setTimeout(() => {
-                projectItem.classList.add("animate");
-            }, index * 100); // Delay each item by 100 milliseconds
-        });
-    });
-
-// Animate On Scroll initialisation
-AOS.init();
-
-// Smooth Scrolling
-$('.smoothScroll').click(function(event) {
-    event.preventDefault();
-    $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500);
-});
-
-// Back to top button
-$('#back-to-top').click(function() {
-    $('body,html').animate({
-        scrollTop : 0
-    }, 500);
-});
+// Initial call to set the countdown immediately
+updateCountdown();
