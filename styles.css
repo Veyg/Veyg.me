@@ -15,7 +15,8 @@ body {
 
 .header {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column; /* Adjusted */
+  align-items: center; /* Adjusted */
   justify-content: center;
   flex-grow: 1;
   padding-top: 20px;
@@ -109,4 +110,23 @@ div:after {
   62% {
     transform: translate(-22px, 5px) skew(21deg);
   }
+}
+
+.about-me {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ccc;
+  text-align: center;
+  position: relative; /* Add this line */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.cursor {
+  display: inline-block;
+  vertical-align: middle;
+  animation: blink 0.7s infinite;
 }
