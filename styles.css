@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -7,9 +8,48 @@ body {
   margin: 0;
   background: #131313;
   color: #fff;
-  font-size: 37px;
+  font-size: 36px;
   font-family: 'Fira Mono', monospace;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+  padding-top: 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 5;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-grow: 1;
+  padding-bottom: 20px;
+}
+
+.github-link {
+  text-align: center;
+}
+
+.github-link a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.github-link a:hover {
+  color: #7DBBF1;
 }
 
 div {
@@ -18,10 +58,10 @@ div {
 
 @keyframes glitch {
   2%, 64% {
-    transform: translate(2px, 0) skew(0deg);
+    transform: translate(0px, 0) skew(0deg);
   }
   4%, 60% {
-    transform: translate(-2px, 0) skew(0deg);
+    transform: translate(0px, 0) skew(0deg);
   }
   62% {
     transform: translate(0, 0) skew(5deg);
