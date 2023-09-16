@@ -125,8 +125,3 @@ div:after {
     opacity: 0;
   }
 }
-.cursor {
-  display: inline-block;
-  vertical-align: middle;
-  animation: blink 0.7s infinite;
-}
