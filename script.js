@@ -23,3 +23,4 @@ document.addEventListener("DOMContentLoaded", function() {
       ageElement.textContent = age;
   }
 });
+AOS.init();

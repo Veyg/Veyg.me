@@ -246,31 +246,35 @@ footer a:hover, .project-card a:hover {
   left: 100%;
 }
 /* ===404==== */
-.error-page {
+body.error-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #131313;
-  color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .error-content {
+  text-align: center;
   max-width: 600px;
+  width: 100%;
+}
+
+.error-content h1, .error-content p, .error-content a {
+  margin: 10px 0;  /* Adjust the margins for these elements */
 }
 
 .error-number {
   font-size: 6em;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .error-text {
   font-size: 1.5em;
-  margin-bottom: 20px;
 }
 
 .error-image {
   margin-bottom: 30px;
 }
-
