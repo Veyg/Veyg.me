@@ -23,23 +23,3 @@ document.addEventListener("DOMContentLoaded", function() {
       ageElement.textContent = age;
   }
 });
-
-// === MODAL FUNCTIONALITY ===
-const modal = document.getElementById('projectModal');
-const closeBtn = document.querySelector('.close-btn');
-
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('click', () => {
-      modal.style.display = 'block';
-  });
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-      modal.style.display = 'none';
-  }
-});
