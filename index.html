@@ -1,32 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David - Software Developer</title>
   <link rel="stylesheet" href="styles.css">
-  <title>Your Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <script src="script.js"></script> 
-    <div class="header">
-    <div class="name" title="Veyg">Veyg</div>
-    <div class="about-me" id="aboutMe"></div>
-
-
-
-  </div>
-
-  <div class="content">
-    <!-- Your repositories and other content can go here -->
-  </div>
-  
-  <div class="footer">
-    <div class="github-link">
-      <a href="https://github.com/Veyg" target="_blank">
-        <img src="github-icon.svg" alt="GitHub">
-        GitHub
-      </a>
+  <header>
+    <div class="container">
+      <h1>Hello, I'm <span class="name-hover">David</span>, I develop software</h1>
     </div>
+  </header>
+
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p class="description">I am a <span class="highlight" id="age">--</span> year old student, passionate about
+          crafting software for everyday use. Beyond the world of code, I delve into <span
+            class="highlight">tech</span>, <span class="highlight">astrophysics</span>, and <span
+            class="highlight">music production</span>.</p>
+      </div>
+    </div>
+  </section>
+  <section id="tech-stack">
+    <div class="container">
+        <h2>Tech Stack</h2>
+        <div class="tech-icons">
+            <!-- Java -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:java" data-inline="false"></span>
+            </div>
+            <!-- Spring Boot -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:spring" data-inline="false"></span>
+            </div>
+            <!-- Maven -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:maven" data-inline="false"></span>
+            </div>
+            <!-- Git -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:git-icon" data-inline="false"></span>
+            </div>
+            <!-- GitHub Actions -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:github-actions" data-inline="false"></span>
+            </div>
+            <!-- Docker -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:docker-icon" data-inline="false"></span>
+            </div>
+            <!-- MySQL -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:mysql" data-inline="false"></span>
+            </div>
+            <!-- AWS EC2 -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:aws-ec2" data-inline="false"></span>
+            </div>
+            <!-- Postman -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:postman" data-inline="false"></span>
+            </div>
+            <!-- Jira -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:jira" data-inline="false"></span>
+            </div>
+            <!-- Python -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:python" data-inline="false"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="path-to-project1-image.jpg" alt="Project 1">
+          <h3>Project Name 1</h3>
+          <p>Short description of the project.</p>
+          <a href="link-to-project1" target="_blank">View Project</a>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="path-to-project2-image.jpg" alt="Project 2">
+          <h3>Project Name 2</h3>
+          <p>Short description of the project.</p>
+          <a href="link-to-project2" target="_blank">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <!-- Add other links if needed -->
+    </div>
+  </footer>
+<!-- Project Modal -->
+<div class="project-modal" id="projectModal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Project Name</h2>
+      <img src="path-to-project-image.jpg" alt="Project Image">
+      <p>Project description goes here...</p>
+      <a href="link-to-project" target="_blank">View Project</a>
   </div>
+</div>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
