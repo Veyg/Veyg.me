@@ -1,3 +1,4 @@
+/* === BASE STYLES === */
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -17,10 +18,11 @@ body {
   text-align: center;
 }
 
+/* === HEADER STYLES === */
 header h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 section h2 {
@@ -28,55 +30,71 @@ section h2 {
   margin-bottom: 20px;
 }
 
+/* === TYPOGRAPHY & LINKS === */
 #tech-stack ul {
   list-style-type: none;
 }
 
-footer a {
+footer a, .project-card a {
   color: #BFA76A;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-footer a:hover {
+footer a:hover, .project-card a:hover {
   color: #D4C29D;
 }
-/* ... Icons ... */
 
-
+/* === TECH STACK ICONS === */
 .tech-icons {
   display: flex;
-  justify-content: center; /* Center the icons */
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px; /* Spacing between icons */
+  gap: 20px;
 }
 
 .tech-item {
   text-align: center;
-  width: 60px; /* Adjust as needed */
-  height: 60px; /* Adjust as needed */
-  border-radius: 10px; /* Rounded corners */
-  background-color: #2a2a2a; /* Dark gray background */
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #2a2a2a;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s;
+  position: relative;
 }
 
 .tech-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2); /* subtle glow on hover */
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
 .iconify {
-  font-size: 2em; /* Adjust size as needed */
-  color: white; /* This will set the icons' color to white */
+  font-size: 2em;
+  color: white;
 }
 
+.tech-item .tech-name {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
 
-/* ... Name hover ... */
+.tech-item:hover .tech-name {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* === NAME HOVER EFFECT === */
 .name-hover {
   position: relative;
   cursor: pointer;
@@ -90,7 +108,7 @@ footer a:hover {
   left: 0;
   white-space: nowrap;
   opacity: 0;
-  color: white; /* Explicitly set the color */
+  color: white;
   transition: opacity 0.3s ease;
 }
 
@@ -99,10 +117,10 @@ footer a:hover {
 }
 
 .name-hover:hover {
-  color: transparent; /* Makes the text transparent without affecting the background */
+  color: transparent;
 }
-/* ... About me ... */
 
+/* === ABOUT SECTION === */
 #about {
   padding: 60px 0;
 }
@@ -138,7 +156,8 @@ footer a:hover {
   border-radius: 2px;
 }
 
-/* ... Projects ... */
+
+/* === PROJECTS SECTION === */
 #projects {
   padding: 50px 0;
 }
@@ -146,21 +165,22 @@ footer a:hover {
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; /* Adjust as needed */
+  gap: 30px;
   justify-content: center;
 }
 
 .project-card {
-  background-color: #2a2a2a; /* Dark gray background */
+  background-color: #2a2a2a;
   border-radius: 10px;
   padding: 20px;
-  width: 300px; /* Adjust as needed */
+  width: 300px;
   transition: transform 0.3s;
+  margin: 20px 0;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2); /* subtle glow on hover */
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
 .project-card img {
@@ -173,26 +193,37 @@ footer a:hover {
   margin-bottom: 10px;
 }
 
-.project-card a {
-  display: inline-block;
+.tech-used {
   margin-top: 10px;
+  font-size: 0.9em;
   color: #BFA76A;
-  text-decoration: none;
-  transition: color 0.3s;
 }
 
-.project-card a:hover {
-  color: #D4C29D;
+.read-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #BFA76A;
+  color: #131313;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
+
+.read-more-btn:hover {
+  background-color: #D4C29D;
+}
+
+/* === MODAL STYLES === */
 .project-modal {
-  display: none; /* Hidden by default */
-  position: fixed; 
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
-  z-index: 1000; /* Ensure it's on top */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
 }
 
 .modal-content {
