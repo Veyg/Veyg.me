@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Albion world boss discord bot">
+    <title>Veyg - World Boss Bot</title>
+    <!-- Styles, Fonts, and Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style></style>
+</head>
+
+
+<body>
+    <div id="tsparticles"></div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Discord World Boss Bot</h1>
+            <h2>for Albion Online</h2>
+        </div>
+    </header>
+    <div class="container">
+        <a href="https://discord.com/api/oauth2/authorize?client_id=1145671676902785084&amp;permissions=566935907456&amp;scope=bot" class="read-more-btn">
+            <span class="iconify" data-icon="mdi:discord" data-inline="false"></span> Invite the Bot
+        </a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME" class="read-more-btn">
+            <span class="iconify" data-icon="mdi:github" data-inline="false"></span> View on GitHub
+        </a>
+    </div>
+    
+
+    <div id="readme-section" class="readme-section">
+        <h1 id="second-albion-wb-timer-bot">Albion Online World Boss Bot</h1>
+        <p><strong>Author:</strong> Veyg</p>
+        <hr>
+        <h2 id="introduction">Introduction</h2>
+        <p>Albion-WB-timer-bot is a Discord bot designed to help Albion Online players manage world boss spawn timers
+            for different maps. With this bot, you can easily set, edit, and delete timers for world bosses, making it a
+            valuable tool for organizing your in-game activities.</p>
+        <h2 id="features">Features</h2>
+        <ul>
+            <li>Set designated channels for timers.</li>
+            <li>Add timers for world bosses in various maps.</li>
+            <li>Edit existing timers when needed.</li>
+            <li>Delete timers that are no longer relevant.</li>
+        </ul>
+        <h2 id="usage">Usage</h2>
+        <p>To use the Albion-WB-timer-bot, you can invite it to your Discord server and interact with it through Discord
+            commands.</p>
+        <h3 id="available-commands">Available Commands</h3>
+        <ol>
+            <li>
+                <p><code>/setdesignatedchannel</code>: Set the designated channel for timers.</p>
+            </li>
+            <li>
+                <p><code>/addtimer</code>: Add a timer for a world boss.</p>
+                <ul>
+                    <li>Options:<ul>
+                            <li><code>time</code>: Time for the boss spawn in HH:mm:ss format (required).</li>
+                            <li><code>map</code>: Name of the map where the boss spawns (required).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><code>/deletetimer</code>: Delete a timer for a world boss.</p>
+                <ul>
+                    <li>Options:<ul>
+                            <li><code>map</code>: Name of the map where the boss spawns (required).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><code>/edittimer</code>: Edit a timer for a world boss.</p>
+                <ul>
+                    <li>Options:<ul>
+                            <li><code>map</code>: Name of the map where the boss spawns (required).</li>
+                            <li><code>newtime</code>: New time for the boss spawn in HH:mm:ss format (required).</li>
+                            <li><code>newdate</code>: New date for the boss spawn in d/MM/yyyy format (required).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h2 id="getting-started">Getting Started</h2>
+        <p>To get started with the Albion-WB-timer-bot, follow these steps:</p>
+        <ol>
+            <li>
+                <p><strong>Invite the Bot</strong>: <a
+                        href="https://discord.com/api/oauth2/authorize?client_id=1145671676902785084&permissions=566935907456&scope=bot">Invite
+                        the bot to your Discord server</a>.</p>
+            </li>
+            <li>
+                <p><strong>Set Up Designated Channels</strong>: Use the <code>/setdesignatedchannel</code> command to
+                    specify the channels where the bot will send timer notifications.</p>
+            </li>
+            <li>
+                <p><strong>Add Timers</strong>: Use the <code>/addtimer</code> command to create timers for world bosses
+                    in different maps.</p>
+            </li>
+            <li>
+                <p><strong>Manage Timers</strong>: You can use the <code>/deletetimer</code> and <code>/edittimer</code>
+                    commands to manage your timers as needed.</p>
+            </li>
+        </ol>
+        <h2 id="contributing">Contributing</h2>
+        <p>Contributions to this project are welcome! If you have suggestions, bug reports, or would like to contribute
+            code, please <a href="../../issues">open an issue</a> or <a href="../../pulls">submit a pull request</a>.
+        </p>
+        <h2 id="support">Support</h2>
+        <p>For questions, issues, or support, you can contact the author, or join the discord</p>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://github.com/Veyg" target="_blank" rel="noopener noreferrer"
+                        title="My GitHub Profile">
+                        <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                    </a>
+                    <a href="https://discordapp.com/users/339505350946455553" target="_blank" rel="noopener noreferrer"
+                        title="Join me on Discord">
+                        <span class="iconify" data-icon="mdi:discord" data-inline="false"></span>
+                    </a>
+                    <a href="mailto:dawid.grochowski@veyg.me" title="Email Me">
+                        <span class="iconify" data-icon="mdi:email-outline" data-inline="false"></span>
+                    </a>
+
+                </div>
+                <p>&copy; 2023 David. All rights reserved.</p>
+                <iframe src="https://github.com/sponsors/Veyg/button" title="Sponsor Veyg" height="32" width="114"
+                    style="border: 0; border-radius: 6px;"></iframe>
+
+            </div>
+        </div>
+    </footer>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+
+    <!-- Scripts -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@latest"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -24,3 +24,55 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+// AOS initialization
+AOS.init();
+
+// tsParticles configuration
+tsParticles.load('tsparticles', {
+  particles: {
+      number: {
+          value: 100
+      },
+      size: {
+          value: 1
+      },
+      twinkle: {
+          particles: {
+              enable: true,
+              frequency: 0.05
+          }
+      }
+  },
+  interactivity: {
+      events: {
+          onhover: {
+              enable: true,
+              mode: "bubble"
+          }
+      },
+      modes: {
+          bubble: {
+              size: 10,
+              distance: 40
+          }
+      }
+  }
+});
+// Get the back-to-home button
+const backToHomeButton = document.querySelector('.back-to-home');
+
+// Add a scroll event listener
+window.addEventListener('scroll', () => {
+    // Get the height of the document
+    const totalDocumentHeight = document.documentElement.scrollHeight;
+
+    // Get the combined height of the window and the current scroll position
+    const scrollPosition = window.innerHeight + window.scrollY;
+
+    // If we're within 300px of the bottom of the page, hide the button
+    if (scrollPosition > totalDocumentHeight - 300) {
+        backToHomeButton.style.opacity = '0';
+    } else {
+        backToHomeButton.style.opacity = '1';
+    }
+});

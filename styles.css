@@ -222,6 +222,7 @@ footer a:hover, .project-card a:hover {
   letter-spacing: 1px; /* Slight letter spacing */
   position: relative; /* Set to relative for pseudo-element positioning */
   overflow: hidden; /* Hide overflow for the hover effect */
+  margin-right: 10px;
 }
 
 .read-more-btn:hover {
@@ -289,9 +290,42 @@ body.error-page {
 .footer-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically, if needed */
   gap: 15px;
 }
+.footer-content iframe {
+  margin: 0 auto;  /* Horizontally centers the iframe */
+  display: block;  /* Makes the iframe a block element so margin auto works */
+}
+
 iframe {
   margin-left: 10px; /* or any other value that looks good */
+}
+.back-to-home {
+  position: fixed;       /* Fixed position */
+  bottom: 20px;          /* 20px from the bottom */
+  left: 50%;             /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for the button's own dimensions */
+  padding: 10px 20px;
+  background-color: #BFA76A;
+  color: #131313;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1000;         /* Ensure it's above other elements */
+  transition: opacity 0.3s ease;
+
+}
+
+.back-to-home:hover {
+  background-color: #D4C29D;
+  color: #131313;
+}
+/* === PROJECT WEB === */
+.btn-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
