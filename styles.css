@@ -286,3 +286,12 @@ body.error-page {
   left: 0;
   z-index: -1; /* Ensure particles are behind your content */
 }
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+iframe {
+  margin-left: 10px; /* or any other value that looks good */
+}
