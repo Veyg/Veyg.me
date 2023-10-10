@@ -226,7 +226,7 @@ footer a:hover, .project-card a:hover {
 
 .read-more-btn:hover {
   background-color: #BFA76A; /* Accent color background on hover */
-  color: #131313; /* Dark text on hover */
+  color: #131313 !important; /* Dark text on hover */
   transform: scale(1.05); /* Slight scale on hover for a "pop" effect */
 }
 
