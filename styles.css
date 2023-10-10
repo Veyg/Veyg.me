@@ -12,8 +12,9 @@ body {
   background-color: #131313;
   color: white;
   line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
