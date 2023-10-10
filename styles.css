@@ -303,10 +303,10 @@ iframe {
   margin-left: 10px; /* or any other value that looks good */
 }
 .back-to-home {
-  position: fixed;       /* Fixed position */
-  bottom: 20px;          /* 20px from the bottom */
-  left: 50%;             /* Center horizontally */
-  transform: translateX(-50%); /* Adjust for the button's own dimensions */
+  position: fixed;     
+  bottom: 20px;         
+  left: 50%;         
+  transform: translateX(-50%); 
   padding: 10px 20px;
   background-color: #BFA76A;
   color: #131313;
@@ -314,7 +314,7 @@ iframe {
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  z-index: 1000;         /* Ensure it's above other elements */
+  z-index: 1000;    
   transition: opacity 0.3s ease;
 
 }
