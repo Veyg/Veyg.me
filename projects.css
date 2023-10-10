@@ -91,3 +91,23 @@ body {
     padding-left: 20px; /* Adjust as needed */
 
 }
+/* === MAINTENANCE === */
+.maintenance-notice {
+    display: inline-block;
+    background-color: #f9f2f2; /* Very light red background */
+    color: #d73a49; /* Red text */
+    padding: 5px 15px; /* Reduced padding */
+    border: 1px solid #f9e2e2; /* Lighter border */
+    border-radius: 25px; /* Increased border-radius for more rounded corners */
+    font-weight: 500; /* Slightly bold */
+    margin-top: 15px; /* Space from the previous element */
+    text-align: center;
+    font-size: 0.8em; /* Smaller font size */
+    opacity: 0.8; /* Make it less visible */
+    transition: opacity 0.3s; /* Transition for hover effect */
+}
+
+.maintenance-notice:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
