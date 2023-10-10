@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Albion world boss discord bot">
+    <title>Veyg - Currency Exchange API</title>
+    <!-- Styles, Fonts, and Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style></style>
+</head>
+
+
+<body>
+    <div id="tsparticles"></div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Currency Exchange API</h1>
+            <h2>Just some API...</h2>
+        </div>
+    </header>
+    <div class="container">
+        <a href="https://github.com/Veyg/currency-exchange-api" class="read-more-btn">
+            <span class="iconify" data-icon="mdi:github" data-inline="false"></span> View on GitHub
+        </a>
+    </div>
+
+
+    <div id="readme-section" class="readme-section">
+        <p>This project is a simple currency exchange API built with Spring Boot. It provides an interface for
+            converting currency amounts between different currencies using real-time exchange rates.</p>
+        <h2 id="features">Features</h2>
+        <ol>
+            <li><strong>Currency Conversion</strong>: Converts an amount from a base currency to a target currency.</li>
+            <li><strong>Caching</strong>: Uses Caffeine cache to improve performance for frequently requested exchange
+                rates.</li>
+            <li><strong>Rate Limiting</strong>: Limits the number of requests a client can make to the API within a
+                certain period.</li>
+            <li><strong>API Documentation</strong>: Provides a Swagger UI for easy interaction with the API and
+                visualizes the API&#39;s resources.</li>
+        </ol>
+        <h2 id="getting-started">Getting Started</h2>
+        <h3 id="prerequisites">Prerequisites</h3>
+        <ul>
+            <li>Java 17</li>
+            <li>Docker</li>
+        </ul>
+        <h3 id="building-the-application">Building the Application</h3>
+        <ol>
+            <li>Clone the repository to your local machine.</li>
+            <li>Navigate to the directory containing the project.</li>
+            <li>Run the following command to build the project and package it into a JAR file:
+                <pre><code class="lang-sh">mvn clean <span class="hljs-class"><span class="hljs-keyword">package</span></span></code></pre>
+            </li>
+        </ol>
+        <h3 id="building-the-docker-image">Building the Docker Image</h3>
+        <ol>
+            <li>After building the JAR file, build the Docker image using the provided Dockerfile:
+                <pre><code class="lang-sh"><span class="hljs-symbol">docker</span> <span class="hljs-keyword">build </span>-t currency-exchange-api .</code></pre>
+            </li>
+        </ol>
+        <h3 id="running-the-docker-container">Running the Docker Container</h3>
+        <ol>
+            <li>
+                <p>Run the Docker container using the built image:</p>
+                <pre><code class="lang-sh">docker run -<span class="hljs-selector-tag">p</span> <span class="hljs-number">8080</span>:<span class="hljs-number">8080</span> -<span class="hljs-selector-tag">p</span> <span class="hljs-number">3030</span>:<span class="hljs-number">3030</span> currency-exchange-api</code></pre>
+            </li>
+            <li>
+                <p>Visit <code>http://localhost:8080/swagger-ui/index.html</code> in your web browser to interact with
+                    the API using the Swagger UI.</p>
+            </li>
+        </ol>
+        <h2 id="configuration">Configuration</h2>
+        <p>Configuration settings can be found and modified in the <code>application.properties</code> file:</p>
+        <ul>
+            <li><code>api.url</code>: The URL of the external API for fetching exchange rates.</li>
+            <li><code>spring.datasource.url</code>: The URL of the database containing API key information.</li>
+            <li><code>spring.datasource.username</code> and <code>spring.datasource.password</code>: Database
+                credentials.</li>
+            <li>Rate Limiting: API rate limiting is managed through the database. You can configure rate limits for each
+                API key in the database.</li>
+        </ul>
+        <h2 id="api-endpoints">API Endpoints</h2>
+        <ul>
+            <li><code>GET /api/currency/convert/{baseCurrency}/{targetCurrency}/{amount}</code>: Converts an amount from
+                the base currency to the target currency.</li>
+        </ul>
+        <h2 id="swagger-ui">Swagger UI</h2>
+        <p>Swagger UI provides a visual interface for interacting with the API. It automatically generates documentation
+            for the API&#39;s endpoints, including the HTTP methods, parameters, and responses. You can access it by
+            navigating to <code>http://localhost:8080/swagger-ui/index.html</code>.</p>
+        <h2 id="caching">Caching</h2>
+        <p>Caching is implemented using the Caffeine library. The cache is set to have an initial capacity of 100 and a
+            maximum size of 500. Cached values expire after 1 hour of access.</p>
+        <h2 id="authentication">Authentication</h2>
+        <p>The Currency Converter API requires API key authentication. To access the API, you need to include your API
+            key in the request headers.</p>
+        <pre><code><span class="hljs-symbol">Authorization:</span> Bearer <span class="hljs-params">&lt;your-api-key&gt;</span></code></pre>
+        <p><del>For testing purposes, you can use the following public test API key:</del> </p><pre><code><span class="hljs-attribute">Discontinued</span></code></pre>
+        <p><del>Live test on EC2</del> </p>
+        <h2 id="contributing">Contributing</h2>
+        <p>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to
+            change.</p>
+        <h2 id="license">License</h2>
+        <p><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"
+                    alt="License: MIT"></a></p>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://github.com/Veyg" target="_blank" rel="noopener noreferrer"
+                        title="My GitHub Profile">
+                        <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                    </a>
+                    <a href="https://discordapp.com/users/339505350946455553" target="_blank" rel="noopener noreferrer"
+                        title="Join me on Discord">
+                        <span class="iconify" data-icon="mdi:discord" data-inline="false"></span>
+                    </a>
+                    <a href="mailto:dawid.grochowski@veyg.me" title="Email Me">
+                        <span class="iconify" data-icon="mdi:email-outline" data-inline="false"></span>
+                    </a>
+
+                </div>
+                <p>&copy; 2023 David. All rights reserved.</p>
+                <iframe src="https://github.com/sponsors/Veyg/button" title="Sponsor Veyg" height="32" width="114"
+                    style="border: 0; border-radius: 6px;"></iframe>
+
+            </div>
+        </div>
+    </footer>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+
+
+    <!-- Scripts -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@latest"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
