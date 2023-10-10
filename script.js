@@ -77,6 +77,6 @@ window.addEventListener('scroll', () => {
         backToHomeButton.style.opacity = '1';
     }
 });
-$(document).ready(function() {
-    $('body').css('opacity', 1);
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.opacity = "1";
 });
