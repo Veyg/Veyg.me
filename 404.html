@@ -23,6 +23,43 @@
     </div>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@latest"></script>
+    <script>
+  tsParticles.load('tsparticles', {
+      particles: {
+          number: {
+              value: 100
+          },
+          size: {
+              value: 1
+          },
+          twinkle: {
+              particles: {
+                  enable: true,
+                  frequency: 0.05
+              }
+          }
+      },
+      interactivity: {
+          events: {
+              onhover: {
+                  enable: true,
+                  mode: "bubble"
+              }
+          },
+          modes: {
+              bubble: {
+                  size: 10,
+                  distance: 40
+              }
+          }
+      }
+  });
+  
+  </script>
 </body>
 </html>
