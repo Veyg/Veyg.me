@@ -34,30 +34,23 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* === TYPOGRAPHY & LINKS === */
-#tech-stack ul {
-  list-style-type: none;
+/* === TECH STACK SECTION === */
+.category {
+  text-align: center; /* Centers the category title */
 }
 
-footer a, .project-card a {
-  color: #BFA76A;
-  text-decoration: none;
-  transition: color 0.3s;
+.category h3 {
+  font-size: 1.5em;
+  color: #BFA76A; /* Or any other color you prefer */
+  margin-bottom: 15px; /* Adjust as needed */
 }
 
-footer a:hover, .project-card a:hover {
-  color: #D4C29D;
-}
-
-/* === TECH STACK ICONS === */
 .tech-icons {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centers tech items */
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: auto; /* This will push the icons to the bottom */
-
+  margin-bottom: 30px; /* Adds some space between categories */
 }
 
 .tech-item {
