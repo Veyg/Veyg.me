@@ -1,11 +1,16 @@
 /* === BASE STYLES === */
-body, p, ul, li {
+body,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -41,7 +46,7 @@ section h2 {
 
 .category h3 {
   font-size: 1.5em;
-  color: #BFA76A; /* Or any other color you prefer */
+  color: #bfa76a; /* Or any other color you prefer */
   margin-bottom: 15px; /* Adjust as needed */
 }
 
@@ -138,7 +143,7 @@ section h2 {
 }
 
 .highlight {
-  color: #BFA76A;
+  color: #bfa76a;
   position: relative;
   font-weight: 600;
 }
@@ -150,7 +155,7 @@ section h2 {
   left: 0;
   right: 0;
   height: 3px;
-  background-color: #BFA76A;
+  background-color: #bfa76a;
   opacity: 0.6;
   border-radius: 2px;
 }
@@ -162,9 +167,8 @@ section h2 {
 .project-icon {
   font-size: 1.5em; /* Adjust this value to your preference */
   margin-right: 5px; /* Add some spacing between icons */
-    margin-top: 15px; /* Adjust this value based on your preference */
+  margin-top: 15px; /* Adjust this value based on your preference */
 }
-
 
 .projects-grid {
   display: flex;
@@ -217,7 +221,7 @@ section h2 {
 .tech-used {
   margin-top: 10px;
   font-size: 0.9em;
-  color: #BFA76A;
+  color: #bfa76a;
 }
 
 .read-more-btn {
@@ -225,8 +229,8 @@ section h2 {
   margin-top: 20px;
   padding: 12px 20px;
   background-color: transparent; /* Transparent background */
-  border: 2px solid #BFA76A; /* Accent color border */
-  color: #BFA76A; /* Accent color text */
+  border: 2px solid #bfa76a; /* Accent color border */
+  color: #bfa76a; /* Accent color text */
   border-radius: 25px; /* Rounded edges */
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Added transform transition */
@@ -239,7 +243,7 @@ section h2 {
 }
 
 .read-more-btn:hover {
-  background-color: #BFA76A; /* Accent color background on hover */
+  background-color: #bfa76a; /* Accent color background on hover */
   color: #131313 !important; /* Dark text on hover */
   transform: scale(1.05); /* Slight scale on hover for a "pop" effect */
 }
@@ -276,8 +280,10 @@ body.error-page {
   width: 100%;
 }
 
-.error-content h1, .error-content p, .error-content a {
-  margin: 10px 0;  /* Adjust the margins for these elements */
+.error-content h1,
+.error-content p,
+.error-content a {
+  margin: 10px 0; /* Adjust the margins for these elements */
 }
 
 .error-number {
@@ -303,37 +309,36 @@ body.error-page {
 .footer-content {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Centers children horizontally */
+  align-items: center; /* Centers children horizontally */
   justify-content: center; /* Centers children vertically, if needed */
   gap: 15px;
 }
 .footer-content iframe {
-  margin: 0 auto;  /* Horizontally centers the iframe */
-  display: block;  /* Makes the iframe a block element so margin auto works */
+  margin: 0 auto; /* Horizontally centers the iframe */
+  display: block; /* Makes the iframe a block element so margin auto works */
 }
 
 iframe {
   margin-left: 10px; /* or any other value that looks good */
 }
 .back-to-home {
-  position: fixed;     
-  bottom: 20px;         
-  left: 50%;         
-  transform: translateX(-50%); 
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: #BFA76A;
+  background-color: #bfa76a;
   color: #131313;
   border-radius: 25px;
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  z-index: 1000;    
+  z-index: 1000;
   transition: opacity 0.3s ease;
-
 }
 
 .back-to-home:hover {
-  background-color: #D4C29D;
+  background-color: #d4c29d;
   color: #131313;
 }
 /* === PROJECT WEB === */
