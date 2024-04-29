@@ -20,13 +20,6 @@ Welcome to my portfolio repository! This portfolio showcases my software develop
 - **AOS**: For scroll animations.
 - **tsparticles**: For interactive particle animations.
 
-
-## Support
-
-If you like my work and wish to support me, consider sponsoring me on GitHub:
-
-[Sponsor Veyg on GitHub](https://github.com/sponsors/Veyg)
-
 ## License
 
 This project is open-source and available under the MIT License.
